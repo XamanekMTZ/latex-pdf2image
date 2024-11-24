@@ -35,7 +35,7 @@ class LatexToImage:
         result = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-output-directory", output_dir, tex_filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if result.returncode != 0:
             print(result.stderr.decode())  # Muestra el error de pdflatex
-            raise RuntimeError(f"Error al ejecutar pdflatex. Revisa el código LaTeX o las dependencias.")
+            #raise RuntimeError(f"Error al ejecutar pdflatex. Revisa el código LaTeX o las dependencias.")
         
         # Verifica que el archivo PDF fue generado
         if not os.path.exists(pdf_filename):
